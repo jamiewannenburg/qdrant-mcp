@@ -67,6 +67,10 @@ class Settings(BaseSettings):
     )
     
     # Server settings
+    namespace: str = Field(
+        default="qdrant",
+        description="Prefix for MCP tool names (e.g. qdrant_find). Set empty to disable.",
+    )
     server_name: str = Field(
         default="qdrant-mcp",
         description="Name of the MCP server"

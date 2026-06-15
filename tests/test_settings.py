@@ -18,6 +18,7 @@ class TestSettings:
             assert settings.embedding_provider == "openai"
             assert settings.embedding_model == "text-embedding-3-small"
             assert settings.default_limit == 10
+            assert settings.namespace == "qdrant"
     
     def test_environment_variables(self):
         """Test loading settings from environment."""
